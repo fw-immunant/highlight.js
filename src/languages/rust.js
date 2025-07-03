@@ -199,6 +199,12 @@ export default function(hljs) {
         illegal: null
       }),
       {
+        className: 'unsafe_extern',
+        beginKeywords: /unsafe\s+extern/,
+        end: /\}/,
+        keywords: [ 'safe' ],
+      },
+      {
         className: 'symbol',
         // negative lookahead to avoid matching `'`
         begin: /'[a-zA-Z_][a-zA-Z0-9_]*(?!')/
